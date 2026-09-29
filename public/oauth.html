@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Connecting Gmail…</title>
+<meta name="robots" content="noindex" />
+<style>
+  body { margin:0; display:grid; place-items:center; min-height:100vh;
+         font:500 14px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;
+         background:#12100e; color:#f3ece4; }
+  p { opacity:.8 }
+</style>
+</head>
+<body>
+<p id="msg">Finishing sign-in…</p>
+<script>
+/* Google returns the token in the URL fragment, which never leaves the
+   browser. This page hands it to the app window and closes. It posts only
+   to its own origin, and it clears the fragment immediately so the token
+   does not sit in the address bar or in history. */
+(function () {
+  var h = (location.hash || '').replace(/^#/, '');
+  var q = (location.search || '').replace(/^\?/, '');
+  var p = new URLSearchParams(h || q);
+  var payload = {
+    source: 'mango-oauth',
+    access_token: p.get('access_token'),
+    expires_in: p.get('expires_in'),
+    scope: p.get('scope'),
+    state: p.get('state'),
+    error: p.get('error')
+  };
+  try { history.replaceState(null, '', location.pathname); } catch (e) {}
+  try {
+    if (window.opener) {
+      window.opener.postMessage(payload, location.origin);
+      document.getElementById('msg').textContent = payload.error ? 'Sign-in was refused.' : 'Connected. You can close this window.';
+      setTimeout(function () { window.close(); }, 400);
+    } else {
+      document.getElementById('msg').textContent = 'Open Mango and try connecting again.';
+    }
+  } catch (e) {
+    document.getElementById('msg').textContent = 'Could not hand the sign-in back to Mango.';
+  }
+})();
+</script>
+</body>
+</html>

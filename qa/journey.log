@@ -1,0 +1,19 @@
+PASS  lands on onboarding or nutrition home
+PASS  demo workspace loads
+PASS  today shows a recommendation with a reason
+PASS  why-panel opens
+PASS  swap keeps constraints
+PASS  log food: natural language parse
+PASS  grocery list renders
+PASS  progress + consistency score
+PASS  coach answers from real data
+PASS  saved meals round-trips
+PASS  trust toggle switches a real behaviour
+PASS  demo banner is visible and honest
+PASS  pantry takes a quantity and an expiry
+PASS  nutrition widgets render on the dashboard
+PASS  eat-now answers, and the answer moves with the question
+PASS  state survives a reload
+PASS  service worker + manifest served
+
+ERRORS: (none)

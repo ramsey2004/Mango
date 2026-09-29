@@ -1,0 +1,62 @@
+import type { DishSpec } from '../dish-types';
+
+/* Chicken, mutton, fish and egg.
+
+   One caution worth knowing about: IFCT's row for skinless chicken leg
+   states an energy figure roughly twice what its own protein and fat
+   values imply. That row is flagged in the build and is not used here —
+   these recipes are costed against chicken breast and whole chicken,
+   whose figures reconcile. */
+
+export const NONVEG: DishSpec[] = [
+  { id: 'd_chicken_curry', name: 'Chicken curry', slot: 'dinner', cuisine: 'North Indian', serves: 4, servingLabel: '1 katori', yield: 1.1, prepMins: 45,
+    items: [['chicken', 500], ['onion', 150], ['tomato', 150], ['oil', 40], ['ginger', 15], ['garlic', 15], ['garam masala', 8], ['salt', 6]], tags: ['high-protein'] },
+  { id: 'd_butter_chicken', name: 'Butter chicken', slot: 'dinner', cuisine: 'Punjabi', serves: 4, servingLabel: '1 katori', yield: 1.1, prepMins: 60,
+    items: [['chicken', 500], ['tomato', 250], ['butter', 60], ['cream', 80], ['cashew', 30], ['curd', 100], ['garam masala', 8], ['salt', 6]], tags: ['rich', 'restaurant'] },
+  { id: 'd_chicken_tikka', name: 'Chicken tikka', slot: 'snack', cuisine: 'Punjabi', serves: 4, servingLabel: '1 plate', yield: 0.75, prepMins: 50,
+    items: [['chicken', 500], ['curd', 150], ['oil', 25], ['ginger', 15], ['garlic', 15], ['garam masala', 8], ['salt', 5]], tags: ['high-protein', 'grilled'] },
+  { id: 'd_tandoori_chicken', name: 'Tandoori chicken', slot: 'dinner', cuisine: 'Punjabi', serves: 4, servingLabel: '2 pieces', yield: 0.75, prepMins: 60,
+    items: [['chicken', 600], ['curd', 150], ['oil', 30], ['red chilli powder', 8], ['garam masala', 8], ['salt', 6]], tags: ['high-protein', 'grilled'] },
+  { id: 'd_chicken_biryani', name: 'Chicken biryani', slot: 'dinner', cuisine: 'Mughlai', serves: 5, servingLabel: '1 plate', yield: 1.9, prepMins: 75,
+    items: [['rice', 300], ['chicken', 500], ['curd', 150], ['ghee', 60], ['onion', 200], ['garam masala', 10], ['mint', 15], ['salt', 8]], tags: ['festive', 'one-pot'] },
+  { id: 'd_chicken_65', name: 'Chicken 65', slot: 'snack', cuisine: 'South Indian', serves: 4, servingLabel: '1 plate', yield: 0.85, prepMins: 40,
+    items: [['chicken', 500], ['cornflour', 60], ['oil', 120], ['curd', 60], ['red chilli powder', 10], ['curry leaves', 8], ['salt', 5]], tags: ['fried', 'spicy'] },
+  { id: 'd_chicken_kebab', name: 'Chicken seekh kebab (2)', slot: 'snack', cuisine: 'Mughlai', serves: 5, servingLabel: '2 kebabs', yield: 0.8, prepMins: 45,
+    items: [['chicken', 500], ['onion', 100], ['besan', 40], ['oil', 30], ['garam masala', 8], ['salt', 5]], tags: ['high-protein', 'grilled'] },
+  { id: 'd_chicken_soup', name: 'Chicken clear soup', slot: 'snack', cuisine: 'Continental', serves: 3, servingLabel: '1 bowl', yield: 3.5, prepMins: 35,
+    items: [['chicken', 200], ['carrot', 60], ['onion', 50], ['black pepper', 3], ['salt', 4]], tags: ['light', 'low-calorie'] },
+  { id: 'd_grilled_chicken_breast', name: 'Grilled chicken breast', slot: 'dinner', cuisine: 'Continental', serves: 2, servingLabel: '1 fillet', yield: 0.75, prepMins: 25,
+    items: [['chicken', 300], ['oil', 15], ['black pepper', 3], ['salt', 3]], tags: ['high-protein', 'low-carb'] },
+  { id: 'd_chicken_kadai', name: 'Kadai chicken', slot: 'dinner', cuisine: 'North Indian', serves: 4, servingLabel: '1 katori', yield: 1.0, prepMins: 45,
+    items: [['chicken', 500], ['capsicum', 150], ['onion', 120], ['tomato', 150], ['oil', 40], ['garam masala', 8], ['salt', 6]], tags: ['high-protein'] },
+  { id: 'd_chicken_chettinad', name: 'Chettinad chicken', slot: 'dinner', cuisine: 'South Indian', serves: 4, servingLabel: '1 katori', yield: 1.0, prepMins: 50,
+    items: [['chicken', 500], ['coconut', 80], ['onion', 120], ['tomato', 120], ['coconut oil', 40], ['black pepper', 6], ['garam masala', 8], ['salt', 6]], tags: ['spicy'] },
+  { id: 'd_mutton_curry', name: 'Mutton curry', slot: 'dinner', cuisine: 'North Indian', serves: 4, servingLabel: '1 katori', yield: 1.1, prepMins: 90,
+    items: [['mutton', 500], ['onion', 150], ['tomato', 150], ['oil', 50], ['ginger', 15], ['garlic', 15], ['garam masala', 8], ['salt', 6]], tags: ['high-protein', 'rich'] },
+  { id: 'd_rogan_josh', name: 'Rogan josh', slot: 'dinner', cuisine: 'Mughlai', serves: 4, servingLabel: '1 katori', yield: 1.1, prepMins: 100,
+    items: [['mutton', 500], ['curd', 200], ['ghee', 50], ['onion', 120], ['red chilli powder', 10], ['garam masala', 8], ['salt', 6]], tags: ['rich', 'festive'] },
+  { id: 'd_keema', name: 'Mutton keema', slot: 'dinner', cuisine: 'Mughlai', serves: 4, servingLabel: '1 katori', yield: 0.9, prepMins: 50,
+    items: [['mutton', 450], ['onion', 150], ['tomato', 120], ['peas', 100], ['oil', 40], ['garam masala', 8], ['salt', 5]], tags: ['high-protein'] },
+  { id: 'd_fish_curry', name: 'Fish curry', slot: 'dinner', cuisine: 'South Indian', serves: 4, servingLabel: '1 katori', yield: 1.1, prepMins: 35,
+    items: [['fish', 500], ['coconut', 100], ['tamarind', 25], ['onion', 100], ['coconut oil', 30], ['turmeric', 3], ['salt', 5]], tags: ['high-protein'] },
+  { id: 'd_fish_fry', name: 'Fish fry (2 pieces)', slot: 'dinner', cuisine: 'South Indian', serves: 4, servingLabel: '2 pieces', yield: 0.85, prepMins: 30,
+    items: [['fish', 500], ['suji', 60], ['oil', 90], ['red chilli powder', 8], ['turmeric', 3], ['salt', 5]], tags: ['fried', 'high-protein'] },
+  { id: 'd_macher_jhol', name: 'Macher jhol', slot: 'lunch', cuisine: 'Bengali', serves: 4, servingLabel: '1 katori', yield: 1.4, prepMins: 40,
+    items: [['fish', 500], ['potato', 200], ['tomato', 100], ['mustard oil', 40], ['turmeric', 4], ['salt', 5]], tags: ['traditional'] },
+  { id: 'd_prawn_curry', name: 'Prawn curry', slot: 'dinner', cuisine: 'South Indian', serves: 4, servingLabel: '1 katori', yield: 1.0, prepMins: 35,
+    items: [['prawns', 400], ['coconut', 100], ['onion', 100], ['coconut oil', 30], ['tamarind', 20], ['salt', 5]], tags: ['high-protein'] },
+  { id: 'd_egg_curry', name: 'Egg curry', slot: 'dinner', cuisine: 'North Indian', serves: 3, servingLabel: '2 eggs + gravy', yield: 1.2, prepMins: 30,
+    items: [['boiled egg', 300], ['onion', 120], ['tomato', 150], ['oil', 30], ['garam masala', 6], ['salt', 5]], tags: ['high-protein'] },
+  { id: 'd_egg_biryani', name: 'Egg biryani', slot: 'dinner', cuisine: 'Mughlai', serves: 4, servingLabel: '1 plate', yield: 2.0, prepMins: 50,
+    items: [['rice', 250], ['boiled egg', 300], ['curd', 120], ['ghee', 45], ['onion', 150], ['garam masala', 8], ['salt', 6]], tags: ['one-pot'] },
+  { id: 'd_anda_bhurji_pav', name: 'Anda bhurji pav', slot: 'snack', cuisine: 'Maharashtrian', serves: 2, servingLabel: '1 plate', yield: 0.95, prepMins: 15,
+    items: [['egg', 200], ['bread', 120], ['onion', 80], ['tomato', 60], ['oil', 20], ['salt', 3]], tags: ['street', 'high-protein'] },
+  { id: 'd_egg_fried_rice', name: 'Egg fried rice', slot: 'dinner', cuisine: 'Continental', serves: 3, servingLabel: '1 plate', yield: 2.1, prepMins: 20,
+    items: [['rice', 200], ['egg', 150], ['carrot', 60], ['cabbage', 60], ['oil', 30], ['soy sauce', 20], ['salt', 3]], tags: ['one-pot', 'high-protein'] },
+  { id: 'd_chicken_fried_rice', name: 'Chicken fried rice', slot: 'dinner', cuisine: 'Continental', serves: 3, servingLabel: '1 plate', yield: 2.0, prepMins: 25,
+    items: [['rice', 200], ['chicken', 200], ['carrot', 60], ['cabbage', 60], ['oil', 30], ['soy sauce', 20], ['salt', 3]], tags: ['one-pot', 'high-protein'] },
+  { id: 'd_chicken_momos', name: 'Chicken momos (5)', slot: 'snack', cuisine: 'Continental', serves: 4, servingLabel: '5 pieces', yield: 1.5, prepMins: 50,
+    items: [['maida', 200], ['chicken', 300], ['onion', 80], ['oil', 25], ['salt', 5]], tags: ['steamed', 'street'] },
+  { id: 'd_chicken_sandwich', name: 'Chicken sandwich', slot: 'snack', cuisine: 'Continental', serves: 1, servingLabel: '1 sandwich', yield: 0.95, prepMins: 12,
+    items: [['bread', 60], ['chicken', 80], ['mayonnaise', 15], ['cucumber', 30], ['salt', 2]], tags: ['high-protein', 'quick'] },
+];

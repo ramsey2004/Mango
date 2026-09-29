@@ -1,0 +1,77 @@
+{
+  "dropped": [],
+  "flagged": [
+    {
+      "id": "ifct_c006",
+      "name": "Amaranth spinosus, leaves, red and green mix",
+      "stated": 24,
+      "implied": 20
+    },
+    {
+      "id": "ifct_e033",
+      "name": "Lemon, juice",
+      "stated": 37,
+      "implied": 9
+    },
+    {
+      "id": "ifct_g026",
+      "name": "Fenugreek seeds",
+      "stated": 235,
+      "implied": 195
+    },
+    {
+      "id": "ifct_n001",
+      "name": "Chicken, poultry, leg, skinless",
+      "stated": 384,
+      "implied": 191
+    },
+    {
+      "id": "ifct_q001",
+      "name": "Crab",
+      "stated": 82,
+      "implied": 53
+    },
+    {
+      "id": "ifct_s007",
+      "name": "Crab",
+      "stated": 78,
+      "implied": 61
+    },
+    {
+      "id": "ifct_s009",
+      "name": "Prawns, small",
+      "stated": 71,
+      "implied": 60
+    }
+  ],
+  "energyDerived": [
+    "T001 Coconut oil -> 900 kcal from 100 g fat",
+    "T002 Corn oil -> 900 kcal from 100.01 g fat",
+    "T003 Cotton seed oil -> 900 kcal from 99.99 g fat",
+    "T004 Gingelly oil -> 900 kcal from 100 g fat",
+    "T005 Groundnut oil -> 900 kcal from 100 g fat",
+    "T006 Mustard oil -> 900 kcal from 100 g fat",
+    "T007 Palm oil -> 900 kcal from 100 g fat",
+    "T008 Rice bran oil -> 900 kcal from 100 g fat",
+    "T009 Safflower oil -> 900 kcal from 100.01 g fat",
+    "T010 Safflower oil (blended) -> 900 kcal from 100 g fat",
+    "T011 Soyabean oil -> 900 kcal from 100 g fat",
+    "T012 Sunflower oil -> 900 kcal from 100 g fat",
+    "T013 Ghee -> 900 kcal from 100 g fat",
+    "T014 Vanaspati -> 900 kcal from 100 g fat"
+  ],
+  "consolidated": [
+    {
+      "family": "Brinjal",
+      "n": 21,
+      "representative": "Brinjal - all varieties",
+      "how": "published combined row"
+    },
+    {
+      "family": "Chillies, green",
+      "n": 7,
+      "representative": "Chillies, green - all varieties",
+      "how": "published combined row"
+    }
+  ]
+}
